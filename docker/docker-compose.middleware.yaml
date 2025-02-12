@@ -117,6 +117,8 @@ services:
       - "${EXPOSE_WEAVIATE_PORT:-8080}:8080"
 
 networks:
+  default:
+    driver: bridge
   # create a network between sandbox, api and ssrf_proxy, and can not access outside.
   ssrf_proxy_network:
     driver: bridge
