@@ -5,8 +5,9 @@ prefer-active-python = true
 
 [[tool.poetry.source]]
 name = "tsinghua"
+default = true
 url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
-priority = "default"
+priority = "primary"
 
 [[tool.poetry.source]]
 name = "tencent"
