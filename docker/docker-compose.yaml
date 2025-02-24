@@ -1000,6 +1000,11 @@ networks:
   ssrf_proxy_network:
     driver: bridge
     internal: true
+    ipam:
+      driver: default
+      config:
+        - subnet: "192.168.10.0/24"  # Custom subnet for ssrf_proxy_network
+        - gateway: "192.168.10.1"    # Custom gateway for ssrf_proxy_network
   milvus:
     driver: bridge
   opensearch-net:
